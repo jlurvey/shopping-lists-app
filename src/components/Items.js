@@ -1,9 +1,14 @@
 import React from "react";
 
-function Items() {
+function Items({items}) {
+
+    console.log(items)
+
     return (
         <div>
-            Items
+            
+            {items.map((item)=> (<li key={item.id}>{item.name} - {item.store}</li>))}
+            
         </div>
     );
 }

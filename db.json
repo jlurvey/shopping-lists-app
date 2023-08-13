@@ -4,23 +4,23 @@
         "id": 1,
         "name": "Frozen Broccoli",
         "need": false,
-        "Store": "Publix"
+        "store": "Publix"
       },
       {
         "id": 2,
         "name": "Advil PM",
         "need": true,
-        "Store": "CVS"
+        "store": "CVS"
       }
     ],
     "stores": [
       {
         "id": 1,
-        "Store": "Publix"
+        "store": "Publix"
       },
       {
         "id": 2,
-        "Store": "CVS"
+        "store": "CVS"
       }
     ]
   }

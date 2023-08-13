@@ -32,7 +32,7 @@ function App() {
           <Lists />
         </Route>
         <Route exact path='/items'>
-          <Items />
+          <Items items={items}/>
         </Route>
         <Route exact path='/stores'>
           <Stores />
