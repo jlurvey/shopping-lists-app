@@ -7,9 +7,19 @@
         "Store": "Publix"
       },
       {
-        "id": 1,
+        "id": 2,
         "name": "Advil PM",
         "need": true,
+        "Store": "CVS"
+      }
+    ],
+    "stores": [
+      {
+        "id": 1,
+        "Store": "Publix"
+      },
+      {
+        "id": 2,
         "Store": "CVS"
       }
     ]
