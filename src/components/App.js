@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
-import './App.css';
+import '../App.css';
 import NavBar from './NavBar';
 import ShoppingLists from './ShoppingLists';
 import Items from './Items';
 import Stores from './Stores';
+import {Route, Switch} from 'react-router-dom'
 
 
 function App() {
@@ -25,6 +26,18 @@ function App() {
       <header className="App-header">
         Shopping List
       </header>
+      <NavBar />
+      <Switch>
+        <Route exact path='/shoppinglists'>
+          <ShoppingLists />
+        </Route>
+        <Route exact path='/items'>
+          <Items />
+        </Route>
+        <Route exact path='/stores'>
+          <Stores />
+        </Route>
+      </Switch>
     </div>
   );
 }
