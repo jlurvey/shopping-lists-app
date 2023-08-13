@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import '../App.css';
 import NavBar from './NavBar';
-import ShoppingLists from './ShoppingLists';
+import Lists from './Lists';
 import Items from './Items';
 import Stores from './Stores';
 import {Route, Switch} from 'react-router-dom'
@@ -24,12 +24,12 @@ function App() {
   return (
     <div className="App">
       <header >
-        Shopping List
+        Shopping Lists
       </header>
       <NavBar />
       <Switch>
-        <Route exact path='/shoppinglists'>
-          <ShoppingLists />
+        <Route exact path='/lists'>
+          <Lists />
         </Route>
         <Route exact path='/items'>
           <Items />

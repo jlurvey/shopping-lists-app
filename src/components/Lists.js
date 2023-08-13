@@ -1,6 +1,6 @@
 import React from "react";
 
-function ShoppingLists() {
+function Lists() {
     return (
         <div>
 
@@ -8,4 +8,4 @@ function ShoppingLists() {
     );
 }
 
-export default ShoppingLists
+export default Lists
