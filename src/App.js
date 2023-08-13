@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import './App.css';
 
 function App() {
-
+  
+  //items useState
   const [items, setItems] = useState([])
 
-  console.log(items);
-
+  //fetch items data
   useEffect(() => {
     fetch('http://localhost:3000/items')
       .then((r) => r.json())
