@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from "react";
 import './App.css';
+import NavBar from './NavBar';
+import Lists from './Lists';
+import Items from './Items';
+import Stores from './Stores';
+
 
 function App() {
   
