@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import './App.css';
 import NavBar from './NavBar';
-import Lists from './ShoppingLists';
+import ShoppingLists from './ShoppingLists';
 import Items from './Items';
 import Stores from './Stores';
 
