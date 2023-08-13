@@ -3,11 +3,15 @@ import './App.css';
 
 function App() {
 
+  const [items, setItems] = useState([])
+
+  console.log(items);
+
   useEffect(() => {
     fetch('http://localhost:3000/items')
       .then((r) => r.json())
       .then((data) => {
-        console.log(data);
+        setItems(data);
       });
   }, []);
 
