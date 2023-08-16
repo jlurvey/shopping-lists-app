@@ -1,9 +1,18 @@
 import React from "react";
+import Store from "./Store";
 
-function Stores() {
+function Stores({stores}) {
+
+    console.log(stores)
+
     return (
         <div>
-            Stores
+            {stores.map((store)=> (
+                <Store 
+                key={store.id}
+                name={store.name}
+                />
+            ))}
         </div>
     );
 }

@@ -12,7 +12,6 @@ function App() {
   //items, stores useState
   const [items, setItems] = useState([]);
   const [stores, setStores] = useState([])
- console.log(items,stores);
 
   //fetch items data
   useEffect(() => {

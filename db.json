@@ -16,11 +16,11 @@
     "stores": [
       {
         "id": 1,
-        "store": "Publix"
+        "name": "Publix"
       },
       {
         "id": 2,
-        "store": "CVS"
+        "name": "CVS"
       }
     ]
   }
