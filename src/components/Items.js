@@ -1,13 +1,13 @@
 import React from "react";
+import Item from "./Item";
 
 function Items({items}) {
 
-    console.log(items)
 
     return (
         <div>
             
-            {items.map((item)=> (<li key={item.id}>{item.name} - {item.store}</li>))}
+            {items.map((item)=> (<Item key={item.id} name={item.name} store={item.store} need={item.need}/>))}
             
         </div>
     );
