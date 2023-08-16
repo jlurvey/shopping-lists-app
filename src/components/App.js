@@ -4,13 +4,15 @@ import NavBar from './NavBar';
 import Lists from './Lists';
 import Items from './Items';
 import Stores from './Stores';
-import {Route, Switch} from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 
 
 function App() {
-  
-  //items useState
-  const [items, setItems] = useState([])
+
+  //items, stores useState
+  const [items, setItems] = useState([]);
+  const [stores, setStores] = useState([])
+ console.log(items,stores);
 
   //fetch items data
   useEffect(() => {
@@ -20,6 +22,17 @@ function App() {
         setItems(data);
       });
   }, []);
+
+  //fetch stores data
+  useEffect(() => {
+    fetch('http://localhost:3000/stores')
+      .then((r) => r.json())
+      .then((data) => {
+        setStores(data);
+      });
+  }, []);
+
+
 
   return (
     <div className="App">
@@ -32,7 +45,7 @@ function App() {
           <Lists />
         </Route>
         <Route exact path='/items'>
-          <Items items={items}/>
+          <Items items={items} />
         </Route>
         <Route exact path='/stores'>
           <Stores />
