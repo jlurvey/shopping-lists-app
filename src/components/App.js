@@ -48,7 +48,7 @@ function App() {
           <Items items={items} />
         </Route>
         <Route exact path='/stores'>
-          <Stores />
+          <Stores stores={stores}/>
         </Route>
       </Switch>
     </div>
