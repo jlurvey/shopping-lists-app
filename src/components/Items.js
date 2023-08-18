@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Item from "./Item";
 
 function Items({ items }) {
@@ -8,8 +8,6 @@ function Items({ items }) {
         store: ''
     });
 
-    console.log(form)
-
     function handleChange(e) {
         setForm({
             ...form,
@@ -18,6 +16,15 @@ function Items({ items }) {
     };
 
     //submitForm event listener, POST new item to server with need=true, update items state
+
+    function handleSubmit(e) {
+        e.preventDefault();
+        console.log(`Name: ${form.name}, Store: ${form.store}`)
+        setForm({
+            name: '',
+            store: ''
+        });
+    };
 
 
     return (
@@ -30,9 +37,20 @@ function Items({ items }) {
                     need={item.need} //remove need from items list, only make available on Lists
                 />
             ))}
-            <form >
-                Item Name: <input type='text' name='name' value={form.name} onChange={handleChange} />
-                Store: <input type='text' name='store' value={form.store} onChange={handleChange}/>
+            <form onSubmit={handleSubmit}>
+                Item Name: <input
+                    type='text'
+                    name='name'
+                    value={form.name}
+                    onChange={handleChange}
+                />
+                Store: <input
+                    type='text'
+                    name='store'
+                    value={form.store}
+                    onChange={handleChange}
+                />
+                <button type='submit'>Add Item</button>
             </form>
         </div>
     );
