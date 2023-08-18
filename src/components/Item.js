@@ -13,6 +13,7 @@ function Item({ name, store, need }) {
             <button className={need ? 'need' : ''} onClick={handleNeedClick}>
                 {need ? 'Need' : 'Do not need'}
             </button>
+            <button>Delete</button>
         </li>
     );
 };

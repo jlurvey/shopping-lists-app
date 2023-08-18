@@ -3,11 +3,13 @@ import Item from "./Item";
 
 function Items({ items, onAddItem }) {
 
+    //contolled form state
     const [form, setForm] = useState({
         name: '',
         store: '',
     });
 
+    //controlled form listener
     function handleChange(e) {
         setForm({
             ...form,
