@@ -3,6 +3,11 @@ import Item from "./Item";
 
 function Items({ items }) {
 
+    const [form, setForm] = useState({
+        name: '',
+        store: ''
+    });
+
 
     return (
         <div>
@@ -14,7 +19,7 @@ function Items({ items }) {
                     need={item.need} //remove need from items list, only make available on Lists
                 />
             ))}
-            <form onChange={{/* handleChange */}}>
+            <form onChange={{/* handleChange */ }}>
                 Item Name: <input type='text' name='name' value={''} />
                 Store: <input type='text' name='store' value={''} />
             </form>
