@@ -3,8 +3,8 @@ import Store from "./Store";
 
 function Stores({stores}) {
 
-    console.log(stores)
 
+    
     return (
         <div>
             {stores.map((store)=> (

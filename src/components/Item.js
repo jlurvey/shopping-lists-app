@@ -10,10 +10,7 @@ function Item({ name, store, need }) {
         <li className={need ? 'need' : ''}>
             <span>{name}</span>
             <span className='store'>{store}</span>
-            <button
-                className={need ? 'need' : ''}
-                onClick={handleNeedClick}
-            >
+            <button className={need ? 'need' : ''} onClick={handleNeedClick}>
                 {need ? 'Need' : 'Do not need'}
             </button>
         </li>

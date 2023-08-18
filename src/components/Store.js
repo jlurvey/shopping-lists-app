@@ -9,9 +9,7 @@ function Store({name}) {
     return (
         <li>
             <span>{name}</span>
-            <button
-                onClick={handleDeleteClick}
-            >Delete</button>
+            <button onClick={handleDeleteClick}>Delete</button>
         </li>
     )
 };
