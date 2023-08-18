@@ -17,6 +17,12 @@
       "need": true,
       "store": "Publix",
       "id": 3
+    },
+    {
+      "name": "Greek Yogurt",
+      "need": true,
+      "store": "Publix",
+      "id": 4
     }
   ],
   "stores": [
