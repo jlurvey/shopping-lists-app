@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Item from "./Item";
 
 function Items({ items }) {
@@ -7,6 +7,15 @@ function Items({ items }) {
         name: '',
         store: ''
     });
+
+    console.log(form)
+
+    function handleChange(e) {
+        setForm({
+            ...form,
+            [e.target.name]: e.target.value
+        });
+    };
 
 
     return (
@@ -19,9 +28,9 @@ function Items({ items }) {
                     need={item.need} //remove need from items list, only make available on Lists
                 />
             ))}
-            <form onChange={{/* handleChange */ }}>
-                Item Name: <input type='text' name='name' value={''} />
-                Store: <input type='text' name='store' value={''} />
+            <form >
+                Item Name: <input type='text' name='name' value={form.name} onChange={handleChange} />
+                Store: <input type='text' name='store' value={form.store} onChange={handleChange}/>
             </form>
         </div>
     );
