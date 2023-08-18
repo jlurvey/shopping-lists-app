@@ -17,6 +17,8 @@ function Items({ items }) {
         });
     };
 
+    //submitForm event listener, POST new item to server with need=true, update items state
+
 
     return (
         <div>
