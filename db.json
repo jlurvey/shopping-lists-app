@@ -1,26 +1,32 @@
 {
-    "items": [
-      {
-        "id": 1,
-        "name": "Frozen Broccoli",
-        "need": true,
-        "store": "Publix"
-      },
-      {
-        "id": 2,
-        "name": "Advil PM",
-        "need": true,
-        "store": "CVS"
-      }
-    ],
-    "stores": [
-      {
-        "id": 1,
-        "name": "Publix"
-      },
-      {
-        "id": 2,
-        "name": "CVS"
-      }
-    ]
-  }
+  "items": [
+    {
+      "id": 1,
+      "name": "Frozen Broccoli",
+      "need": true,
+      "store": "Publix"
+    },
+    {
+      "id": 2,
+      "name": "Advil PM",
+      "need": true,
+      "store": "CVS"
+    },
+    {
+      "name": "Oats",
+      "need": true,
+      "store": "Publix",
+      "id": 3
+    }
+  ],
+  "stores": [
+    {
+      "id": 1,
+      "name": "Publix"
+    },
+    {
+      "id": 2,
+      "name": "CVS"
+    }
+  ]
+}

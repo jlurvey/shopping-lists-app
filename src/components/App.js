@@ -31,6 +31,10 @@ function App() {
       });
   }, []);
 
+  function handleAddItem(newItem) {
+    setItems([...items, newItem])
+  };
+
 
 
   return (
@@ -44,7 +48,7 @@ function App() {
           <Lists />
         </Route>
         <Route exact path='/items'>
-          <Items items={items} />
+          <Items items={items} onAddItem={handleAddItem}/>
         </Route>
         <Route exact path='/stores'>
           <Stores stores={stores}/>
