@@ -20,7 +20,7 @@ function ItemForm({ onAddItem, }) {
 
     function handleSubmit(e) {
         e.preventDefault();
-        console.log(`Name: ${form.name}, Store: ${form.store}`)
+
         const formData = {
             name: form.name,
             need: true,
@@ -58,9 +58,7 @@ function ItemForm({ onAddItem, }) {
                 <button type='submit'>Add Item</button>
             </form>
         </div>
-
     )
-
 };
 
 export default ItemForm;

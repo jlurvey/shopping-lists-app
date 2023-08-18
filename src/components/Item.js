@@ -6,6 +6,10 @@ function Item({ name, store, need }) {
         //POST request
     };
 
+    function handleDeleteClick() {
+        //DELETE request
+    };
+
     return (
         <li className={need ? 'need' : ''}>
             <span>{name}</span>
