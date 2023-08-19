@@ -86,7 +86,11 @@ function App() {
           />
         </Route>
         <Route exact path='/stores'>
-          <Stores stores={stores} onAddStore={handleAddStore} />
+          <Stores
+            stores={stores}
+            onAddStore={handleAddStore}
+            onDeleteStore={handleDeleteStore}
+          />
         </Route>
       </Switch>
     </div>

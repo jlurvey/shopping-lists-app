@@ -1,9 +1,14 @@
 import React from "react";
 
-function Store({name}) {
+function Store({ id, name, onDeleteStore }) {
 
     function handleDeleteClick() {
-        //DELETE Request?
+        //DELETE Request
+        fetch(`http://localhost:3000/stores/${id}`, {
+            method: 'DELETE',
+        })
+            .then((r) => r.json())
+            .then(() => onDeleteStore(id));
     };
 
     return (
