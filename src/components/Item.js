@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-function Item({ id, name, store, need }) {
+function Item({ id, name, store, need, onUpdateNeed }) {
 
 
 
@@ -15,7 +15,7 @@ function Item({ id, name, store, need }) {
             }),
         })
         .then((r)=>r.json())
-        .then((updatedNeed)=> console.log(updatedNeed))
+        .then((updatedItem)=> onUpdateNeed(updatedItem))
 
     };
 

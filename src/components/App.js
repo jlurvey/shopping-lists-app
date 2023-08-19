@@ -31,11 +31,23 @@ function App() {
       });
   }, []);
 
+  //addItem update items state
   function handleAddItem(newItem) {
     setItems([...items, newItem])
   };
 
-
+  //need update items state
+  function handleUpdateNeed(updatedItem) {
+    //map to create new array with updated item
+    const updatedItems = items.map((item)=> {
+      if (item.id===updatedItem.id) {
+        return updatedItem;
+      } else {
+        return item
+      }
+    });
+    setItems(updatedItems);
+  };
 
   return (
     <div className="App">
@@ -48,7 +60,7 @@ function App() {
           <Lists />
         </Route>
         <Route exact path='/items'>
-          <Items items={items} onAddItem={handleAddItem}/>
+          <Items items={items} onAddItem={handleAddItem} onUpdateNeed={handleUpdateNeed}/>
         </Route>
         <Route exact path='/stores'>
           <Stores stores={stores}/>
