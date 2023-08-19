@@ -55,12 +55,12 @@ function App() {
     setItems(updatedItems);
   };
 
-  //addItem update items state
+  //addStore update stores state
   function handleAddStore(newStore) {
     setStores([...stores, newStore])
   };
 
-  //deleteItem update items state
+  //deleteStore update stores state
   function handleDeleteStore(id) {
     const updatedStores = stores.filter((store) => store.id !== id);
     setStores(updatedStores);

@@ -18,19 +18,15 @@ function ItemForm({ onAddItem, stores }) {
         }
     }, [stores])
 
-    console.log(form)
-
     //controlled form listener
     function handleChange(e) {
         setForm({
             ...form,
             [e.target.name]: e.target.value
         });
-
     };
 
     //submitForm event listener, POST new item to server with need=true, update items state
-
     function handleSubmit(e) {
         e.preventDefault();
 
@@ -40,7 +36,6 @@ function ItemForm({ onAddItem, stores }) {
             store: form.store,
         };
 
-        console.log(formData)
         fetch('http://localhost:3000/items', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },

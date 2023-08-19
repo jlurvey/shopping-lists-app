@@ -2,8 +2,6 @@ import React, { useState } from 'react'
 
 function Item({ id, name, store, need, onUpdateNeed, onDeleteItem }) {
 
-
-
     //PATCH fetch request to update need
     function handleNeedClick() {
         fetch(`http://localhost:3000/items/${id}`, {
@@ -15,7 +13,6 @@ function Item({ id, name, store, need, onUpdateNeed, onDeleteItem }) {
         })
             .then((r) => r.json())
             .then((updatedItem) => onUpdateNeed(updatedItem))
-
     };
 
     function handleDeleteClick() {

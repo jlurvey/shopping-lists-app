@@ -4,8 +4,6 @@ import StoreForm from './StoreForm';
 
 function Stores({ stores, onAddStore, onDeleteStore }) {
 
-
-
     return (
         <div>
             {stores.map((store) => (

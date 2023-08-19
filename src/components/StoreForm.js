@@ -7,15 +7,12 @@ function StoreForm({ onAddStore }) {
         name: '',
     });
 
-    console.log(form)
-
     //controlled form listener
     function handleChange(e) {
         setForm({
             ...form,
             [e.target.name]: e.target.value
         });
-
     };
 
     //submitForm event listener, POST new item to server with need=true, update items state
@@ -26,8 +23,7 @@ function StoreForm({ onAddStore }) {
         const formData = {
             name: form.name,
         };
-
-        console.log(formData)
+        
         fetch('http://localhost:3000/stores', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },

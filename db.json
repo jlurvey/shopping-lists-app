@@ -15,6 +15,10 @@
     {
       "id": 2,
       "name": "CVS"
+    },
+    {
+      "name": "Whole Foods",
+      "id": 3
     }
   ]
 }
