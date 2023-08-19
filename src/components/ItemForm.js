@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 
-function ItemForm({ onAddItem, }) {
+function ItemForm({ onAddItem, stores}) {
+
+    console.log(stores)
 
     //contolled form state
     const [form, setForm] = useState({
@@ -49,12 +51,14 @@ function ItemForm({ onAddItem, }) {
                     value={form.name}
                     onChange={handleChange}
                 />
-                Store: <input
+                Store: <select
                     type='text'
                     name='store'
                     value={form.store}
-                    onChange={handleChange}
-                />
+                    onChange={handleChange}                    
+                >
+                    {stores.map((store)=> <option key={store.id} value={store.name}>{store.name}</option>)}
+                    </select>
                 <button type='submit'>Add Item</button>
             </form>
         </div>

@@ -11,7 +11,7 @@ function App() {
 
   //items, stores useState
   const [items, setItems] = useState([]);
-  const [stores, setStores] = useState([])
+  const [stores, setStores] = useState([]);
 
   //fetch items data
   useEffect(() => {
@@ -71,6 +71,7 @@ function App() {
             onAddItem={handleAddItem}
             onDeleteItem={handleDeleteItem}
             onUpdateNeed={handleUpdateNeed}
+            stores={stores}
           />
         </Route>
         <Route exact path='/stores'>

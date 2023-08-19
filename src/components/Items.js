@@ -2,7 +2,7 @@ import React from "react";
 import Item from "./Item";
 import ItemForm from './ItemForm';
 
-function Items({ items, onAddItem, onDeleteItem, onUpdateNeed }) {
+function Items({ items, onAddItem, onDeleteItem, onUpdateNeed, stores }) {
 
     return (
         <div>
@@ -17,7 +17,7 @@ function Items({ items, onAddItem, onDeleteItem, onUpdateNeed }) {
                     onUpdateNeed={onUpdateNeed}
                 />
             ))}
-            <ItemForm onAddItem={onAddItem}/>
+            <ItemForm onAddItem={onAddItem} stores={stores}/>
         </div>
     );
 }

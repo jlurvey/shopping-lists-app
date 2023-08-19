@@ -17,24 +17,6 @@
       "need": true,
       "store": "a",
       "id": 3
-    },
-    {
-      "name": "a",
-      "need": true,
-      "store": "b",
-      "id": 4
-    },
-    {
-      "name": "j",
-      "need": true,
-      "store": "h",
-      "id": 5
-    },
-    {
-      "name": "dij",
-      "need": true,
-      "store": "idwf",
-      "id": 6
     }
   ],
   "stores": [

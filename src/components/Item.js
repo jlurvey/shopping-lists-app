@@ -6,7 +6,6 @@ function Item({ id, name, store, need, onUpdateNeed, onDeleteItem }) {
 
     //PATCH fetch request to update need
     function handleNeedClick() {
-        console.log(`ID: ${id}, Item Name: ${name}, Need? ${need}`)
         fetch(`http://localhost:3000/items/${id}`, {
             method: 'PATCH',
             headers: { 'Content-Type': 'application/json' },
@@ -25,11 +24,7 @@ function Item({ id, name, store, need, onUpdateNeed, onDeleteItem }) {
             method: 'DELETE',
         })
             .then((r) => r.json())
-            .then(() => {
-                console.log(id)
-                return onDeleteItem(id)
-            }
-            );
+            .then(() => onDeleteItem(id));
 
     };
 
