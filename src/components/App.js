@@ -86,7 +86,7 @@ function App() {
           />
         </Route>
         <Route exact path='/stores'>
-          <Stores stores={stores} />
+          <Stores stores={stores} onAddStore={handleAddStore} />
         </Route>
       </Switch>
     </div>

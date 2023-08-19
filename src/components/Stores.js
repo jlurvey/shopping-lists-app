@@ -1,7 +1,8 @@
 import React from "react";
 import Store from "./Store";
+import StoreForm from './StoreForm';
 
-function Stores({stores}) {
+function Stores({stores,onAddStore}) {
 
 
     
@@ -13,6 +14,7 @@ function Stores({stores}) {
                 name={store.name}
                 />
             ))}
+            <StoreForm onAddStore={onAddStore}/>
         </div>
     );
 }
