@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 
-function ItemForm({ onAddItem, stores}) {
-
-    console.log(stores)
+function ItemForm({ onAddItem, stores }) {
 
     //contolled form state
     const [form, setForm] = useState({
         name: '',
-        store: '',
+        store: stores[0]//['name']
     });
+
+    console.log(form)
 
     //controlled form listener
     function handleChange(e) {
@@ -16,6 +16,7 @@ function ItemForm({ onAddItem, stores}) {
             ...form,
             [e.target.name]: e.target.value
         });
+
     };
 
     //submitForm event listener, POST new item to server with need=true, update items state
@@ -28,6 +29,8 @@ function ItemForm({ onAddItem, stores}) {
             need: true,
             store: form.store,
         };
+
+        console.log(formData)
         fetch('http://localhost:3000/items', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -38,27 +41,29 @@ function ItemForm({ onAddItem, stores}) {
         //reset form
         setForm({
             name: '',
-            store: ''
+            store: stores[0]['name']
         });
     };
 
     return (
         <div>
-            <form onSubmit={handleSubmit}>
-                Item Name: <input
+            <form id='addItem' onSubmit={handleSubmit}>
+                Item Name:
+                <input
                     type='text'
                     name='name'
                     value={form.name}
                     onChange={handleChange}
                 />
-                Store: <select
-                    type='text'
+                Store:
+                <select
+                    form='addItem'
+                    type='select'
                     name='store'
-                    value={form.store}
-                    onChange={handleChange}                    
+                    onChange={handleChange}
                 >
-                    {stores.map((store)=> <option key={store.id} value={store.name}>{store.name}</option>)}
-                    </select>
+                    {stores.map((store) => <option key={store.id} value={store.name}>{store.name}</option>)}
+                </select>
                 <button type='submit'>Add Item</button>
             </form>
         </div>
