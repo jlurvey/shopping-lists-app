@@ -1,9 +1,22 @@
 import React, { useState } from 'react'
 
-function Item({ name, store, need }) {
+function Item({ id, name, store, need }) {
 
+
+
+    //PATCH fetch request to update need
     function handleNeedClick() {
-        //POST request
+        console.log(`ID: ${id}, Item Name: ${name}, Need? ${need}`)
+        fetch(`http://localhost:3000/items/${id}`, {
+            method: 'PATCH',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+                need: !need,
+            }),
+        })
+        .then((r)=>r.json())
+        .then((updatedNeed)=> console.log(updatedNeed))
+
     };
 
     function handleDeleteClick() {
