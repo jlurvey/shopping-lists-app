@@ -55,6 +55,17 @@ function App() {
     setItems(updatedItems);
   };
 
+  //addItem update items state
+  function handleAddStore(newStore) {
+    setStores([...stores, newStore])
+  };
+
+  //deleteItem update items state
+  function handleDeleteStore(id) {
+    const updatedStores = stores.filter((store) => store.id !== id);
+    setStores(updatedStores);
+  };
+
   return (
     <div className="App">
       <header >

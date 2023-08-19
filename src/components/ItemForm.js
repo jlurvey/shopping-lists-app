@@ -51,7 +51,7 @@ function ItemForm({ onAddItem, stores }) {
         //reset form
         setForm({
             name: '',
-            store: stores[0]['name']
+            store: form.store
         });
     };
 
