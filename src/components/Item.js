@@ -16,13 +16,7 @@ function Item({ id, name, store, need, onUpdateNeed, onDeleteItem }) {
     };
 
     function handleDeleteClick() {
-        //DELETE request
-        fetch(`http://localhost:3000/items/${id}`, {
-            method: 'DELETE',
-        })
-            .then((r) => r.json())
-            .then(() => onDeleteItem(id));
-
+        onDeleteItem(id);
     };
 
     return (

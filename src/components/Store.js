@@ -8,7 +8,7 @@ function Store({ id, name, onDeleteStore }) {
             method: 'DELETE',
         })
             .then((r) => r.json())
-            .then(() => onDeleteStore(id));
+            .then(() => onDeleteStore(id, name));
     };
 
     return (

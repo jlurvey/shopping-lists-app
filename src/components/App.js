@@ -35,12 +35,12 @@ function App() {
   function handleAddItem(newItem) {
     setItems([...items, newItem])
   };
-
-  //deleteItem update items state
-  function handleDeleteItem(id) {
-    const updatedItems = items.filter((item) => item.id !== id);
-    setItems(updatedItems);
-  };
+  /* 
+    //deleteItem update items state
+    function handleDeleteItem(id) {
+      const updatedItems = items.filter((item) => item.id !== id);
+      setItems(updatedItems);
+    }; */
 
   //updateNeed update items state
   function handleUpdateNeed(updatedItem) {
@@ -60,10 +60,28 @@ function App() {
     setStores([...stores, newStore])
   };
 
+  //fetch DELETE items
+  function handleDeleteItemsById(id) {
+    //DELETE request
+    fetch(`http://localhost:3000/items/${id}`, {
+      method: 'DELETE',
+    })
+      .then((r) => r.json())
+      .then(() => {
+        //const updatedItems = items.filter((item) => item.id !== id);
+        const updatedItems = (prevItems => prevItems.filter((item) => item.id !== id))
+        setItems(updatedItems);
+      });
+  };
+  
   //deleteStore update stores state
-  function handleDeleteStore(id) {
+  function handleDeleteStore(id, name) {
     const updatedStores = stores.filter((store) => store.id !== id);
+    const deletedItems = items.filter((item) => item.store === name)
     setStores(updatedStores);
+    deletedItems.forEach((item) => {
+      handleDeleteItemsById(item.id)
+    });
   };
 
   return (
@@ -80,7 +98,7 @@ function App() {
           <Items
             items={items}
             onAddItem={handleAddItem}
-            onDeleteItem={handleDeleteItem}
+            onDeleteItem={handleDeleteItemsById}
             onUpdateNeed={handleUpdateNeed}
             stores={stores}
           />
