@@ -36,7 +36,13 @@ function App() {
     setItems([...items, newItem])
   };
 
-  //need update items state
+  //deleteItem update items state
+  function handleDeleteItem(deletedItem) {
+    const updatedItems=items.filter((item)=> item.id !== deletedItem.id);
+    setItems(updatedItems);
+  };
+
+  //updateNeed update items state
   function handleUpdateNeed(updatedItem) {
     //map to create new array with updated item
     const updatedItems = items.map((item)=> {
