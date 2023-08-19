@@ -5,33 +5,6 @@
       "name": "Frozen Broccoli",
       "need": true,
       "store": "Publix"
-    },
-    {
-      "name": "rewr",
-      "need": true,
-      "id": 2
-    },
-    {
-      "name": "ee",
-      "need": true,
-      "id": 3
-    },
-    {
-      "name": "adsq",
-      "need": true,
-      "store": "CVS",
-      "id": 4
-    },
-    {
-      "name": "ddd",
-      "need": true,
-      "id": 5
-    },
-    {
-      "name": "heger",
-      "need": true,
-      "store": "CVS",
-      "id": 6
     }
   ],
   "stores": [

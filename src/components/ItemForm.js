@@ -1,12 +1,22 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 function ItemForm({ onAddItem, stores }) {
 
     //contolled form state
     const [form, setForm] = useState({
         name: '',
-        store: stores[0]//['name']
+        store: '',
     });
+
+    //check if stores has rendered
+    useEffect(() => {
+        if (stores.length > 0) {
+            setForm({
+                name: '',
+                store: stores[0].name
+            });
+        }
+    }, [stores])
 
     console.log(form)
 
