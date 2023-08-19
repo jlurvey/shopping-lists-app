@@ -37,16 +37,16 @@ function App() {
   };
 
   //deleteItem update items state
-  function handleDeleteItem(deletedItem) {
-    const updatedItems=items.filter((item)=> item.id !== deletedItem.id);
+  function handleDeleteItem(id) {
+    const updatedItems = items.filter((item) => item.id !== id);
     setItems(updatedItems);
   };
 
   //updateNeed update items state
   function handleUpdateNeed(updatedItem) {
     //map to create new array with updated item
-    const updatedItems = items.map((item)=> {
-      if (item.id===updatedItem.id) {
+    const updatedItems = items.map((item) => {
+      if (item.id === updatedItem.id) {
         return updatedItem;
       } else {
         return item
@@ -66,10 +66,15 @@ function App() {
           <Lists />
         </Route>
         <Route exact path='/items'>
-          <Items items={items} onAddItem={handleAddItem} onUpdateNeed={handleUpdateNeed}/>
+          <Items
+            items={items}
+            onAddItem={handleAddItem}
+            onDeleteItem={handleDeleteItem}
+            onUpdateNeed={handleUpdateNeed}
+          />
         </Route>
         <Route exact path='/stores'>
-          <Stores stores={stores}/>
+          <Stores stores={stores} />
         </Route>
       </Switch>
     </div>

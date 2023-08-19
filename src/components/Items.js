@@ -2,7 +2,7 @@ import React from "react";
 import Item from "./Item";
 import ItemForm from './ItemForm';
 
-function Items({ items, onAddItem, onUpdateNeed }) {
+function Items({ items, onAddItem, onDeleteItem, onUpdateNeed }) {
 
     return (
         <div>
@@ -13,6 +13,7 @@ function Items({ items, onAddItem, onUpdateNeed }) {
                     name={item.name}
                     store={item.store}
                     need={item.need}
+                    onDeleteItem={onDeleteItem}
                     onUpdateNeed={onUpdateNeed}
                 />
             ))}

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-function Item({ id, name, store, need, onUpdateNeed }) {
+function Item({ id, name, store, need, onUpdateNeed, onDeleteItem }) {
 
 
 
@@ -9,18 +9,28 @@ function Item({ id, name, store, need, onUpdateNeed }) {
         console.log(`ID: ${id}, Item Name: ${name}, Need? ${need}`)
         fetch(`http://localhost:3000/items/${id}`, {
             method: 'PATCH',
-            headers: {'Content-Type': 'application/json'},
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
                 need: !need,
             }),
         })
-        .then((r)=>r.json())
-        .then((updatedItem)=> onUpdateNeed(updatedItem))
+            .then((r) => r.json())
+            .then((updatedItem) => onUpdateNeed(updatedItem))
 
     };
 
     function handleDeleteClick() {
         //DELETE request
+        fetch(`http://localhost:3000/items/${id}`, {
+            method: 'DELETE',
+        })
+            .then((r) => r.json())
+            .then(() => {
+                console.log(id)
+                return onDeleteItem(id)
+            }
+            );
+
     };
 
     return (
@@ -30,7 +40,7 @@ function Item({ id, name, store, need, onUpdateNeed }) {
             <button className={need ? 'need' : ''} onClick={handleNeedClick}>
                 {need ? 'Need' : 'Do not need'}
             </button>
-            <button>Delete</button>
+            <button onClick={handleDeleteClick}>Delete</button>
         </li>
     );
 };
