@@ -12,7 +12,7 @@ function Lists({ items, onAddItem, onDeleteItem, onUpdateNeed, stores }) {
             setItemsToDisplay(items.filter((item) => (
                 item.store === stores[0].name)));
         }
-    }, [stores])
+    }, [stores, items])
 
     return (
         <div className='App'>

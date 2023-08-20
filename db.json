@@ -1,46 +1,58 @@
 {
   "items": [
     {
-      "id": 1,
-      "name": "Frozen Broccoli",
+      "name": "1",
       "need": true,
-      "store": "Publix"
+      "store": "Publix",
+      "id": 1
     },
     {
-      "name": "Greek Yogurt",
+      "name": "2",
       "need": true,
       "store": "Publix",
       "id": 2
     },
     {
-      "name": "Oats",
+      "name": "3",
       "need": true,
       "store": "Publix",
       "id": 3
     },
     {
-      "name": "Frozen Chicken Breasts",
-      "need": true,
-      "store": "Publix",
-      "id": 4
-    },
-    {
-      "name": "Toothpaste",
-      "need": true,
-      "store": "CVS",
-      "id": 6
-    },
-    {
-      "name": "Face Soap",
+      "name": "1",
       "need": true,
       "store": "CVS",
       "id": 7
     },
     {
-      "name": "Advil",
+      "name": "2",
       "need": true,
       "store": "CVS",
       "id": 8
+    },
+    {
+      "name": "3",
+      "need": true,
+      "store": "CVS",
+      "id": 9
+    },
+    {
+      "name": "1",
+      "need": true,
+      "store": "Walgreens",
+      "id": 10
+    },
+    {
+      "name": "2",
+      "need": true,
+      "store": "Walgreens",
+      "id": 11
+    },
+    {
+      "name": "3",
+      "need": true,
+      "store": "Walgreens",
+      "id": 12
     }
   ],
   "stores": [
