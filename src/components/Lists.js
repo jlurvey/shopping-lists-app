@@ -1,10 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Item from './Item';
 
 function Lists({ items, onAddItem, onDeleteItem, onUpdateNeed, stores }) {
 
-    const [itemsToDisplay, setItemsToDisplay] = useState(items.filter((item) => (
-        item.store === stores[0].name)));
+    //figure out state
+    const [itemsToDisplay, setItemsToDisplay] = useState([])
+
+    //check if Stores has rendered
+    useEffect(() => {
+        if (stores.length > 0) {
+            setItemsToDisplay(items.filter((item) => (
+                item.store === stores[0].name)));
+        }
+    }, [stores])
 
     return (
         <div className='App'>
@@ -27,7 +35,6 @@ function Lists({ items, onAddItem, onDeleteItem, onUpdateNeed, stores }) {
                     onUpdateNeed={onUpdateNeed}
                 />
             ))}
-
         </div>
     );
 }

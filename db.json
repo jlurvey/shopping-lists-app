@@ -25,12 +25,6 @@
       "id": 4
     },
     {
-      "name": "Frozen Berries",
-      "need": true,
-      "store": "Publix",
-      "id": 5
-    },
-    {
       "name": "Toothpaste",
       "need": true,
       "store": "CVS",
