@@ -1,6 +1,6 @@
 import React from "react";
 
-function Lists() {
+function Lists({ items, onAddItem, onDeleteItem, onUpdateNeed, stores }) {
     return (
         <div className='App'>
             Lists
