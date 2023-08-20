@@ -1,72 +1,5 @@
 {
-  "items": [
-    {
-      "name": "1",
-      "need": false,
-      "store": "Publix",
-      "id": 1
-    },
-    {
-      "name": "2",
-      "need": true,
-      "store": "Publix",
-      "id": 2
-    },
-    {
-      "name": "3",
-      "need": false,
-      "store": "Publix",
-      "id": 3
-    },
-    {
-      "name": "c",
-      "need": true,
-      "store": "Publix",
-      "id": 4
-    },
-    {
-      "name": "b",
-      "need": true,
-      "store": "Publix",
-      "id": 5
-    },
-    {
-      "name": "a",
-      "need": true,
-      "store": "Publix",
-      "id": 6
-    },
-    {
-      "name": "c",
-      "need": true,
-      "store": "CVS",
-      "id": 7
-    },
-    {
-      "name": "b",
-      "need": true,
-      "store": "CVS",
-      "id": 8
-    },
-    {
-      "name": "a",
-      "need": false,
-      "store": "CVS",
-      "id": 9
-    },
-    {
-      "name": "1",
-      "need": false,
-      "store": "CVS",
-      "id": 10
-    },
-    {
-      "name": "2",
-      "need": true,
-      "store": "CVS",
-      "id": 12
-    }
-  ],
+  "items": [],
   "stores": [
     {
       "name": "Publix",
@@ -75,10 +8,6 @@
     {
       "name": "CVS",
       "id": 2
-    },
-    {
-      "name": "Walgreens",
-      "id": 3
     }
   ]
 }

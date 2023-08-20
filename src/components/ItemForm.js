@@ -8,8 +8,6 @@ function ItemForm({ onAddItem, stores, displayedStoreName, setDisplayedStoreName
         store: '',
     });
 
-    console.log(form)
-
     //check if stores has rendered
     useEffect(() => {
         if (stores.length > 0) {
