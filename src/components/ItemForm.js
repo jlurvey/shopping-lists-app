@@ -12,12 +12,6 @@ function ItemForm({ onAddItem, stores, displayedStoreName, setDisplayedStoreName
     useEffect(() => {
         if (stores.length > 0) {
             displayedStoreName ? setForm({ name: '', store: displayedStoreName }) : setForm({ name: '', store: stores[0].name })
-            /* 
-                        setForm({
-                            name: '',
-                            store: stores[0].name
-                        });
-             */
         }
     }, [stores, displayedStoreName])
 
@@ -58,7 +52,7 @@ function ItemForm({ onAddItem, stores, displayedStoreName, setDisplayedStoreName
 
     return (
         <div>
-            <form id='addItem' onSubmit={handleSubmit}>
+            <form className='addItem' onSubmit={handleSubmit}>
                 Item Name:
                 <input
                     type='text'

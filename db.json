@@ -1,5 +1,18 @@
 {
-  "items": [],
+  "items": [
+    {
+      "name": "advil",
+      "need": false,
+      "store": "CVS",
+      "id": 1
+    },
+    {
+      "name": "cough drops",
+      "need": false,
+      "store": "CVS",
+      "id": 2
+    }
+  ],
   "stores": [
     {
       "name": "Publix",

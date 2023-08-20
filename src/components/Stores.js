@@ -6,6 +6,7 @@ function Stores({ stores, onAddStore, onDeleteStore }) {
 
     return (
         <div>
+            <StoreForm onAddStore={onAddStore} />
             {stores.map((store) => (
                 <Store
                     key={store.id}
@@ -14,7 +15,6 @@ function Stores({ stores, onAddStore, onDeleteStore }) {
                     onDeleteStore={onDeleteStore}
                 />
             ))}
-            <StoreForm onAddStore={onAddStore} />
         </div>
     );
 }

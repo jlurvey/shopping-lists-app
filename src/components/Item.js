@@ -20,14 +20,24 @@ function Item({ id, name, store, need, onUpdateNeed, onDeleteItem }) {
     };
 
     return (
-        <li className={need ? 'need' : ''}>
-            <span>{name}</span>
-            <span className='store'>{store}</span>
-            <button className={need ? 'need' : ''} onClick={handleNeedClick}>
-                {need ? 'Need' : 'Do not need'}
-            </button>
-            <button onClick={handleDeleteClick}>Delete</button>
+        <li className={`item-container ${need ? 'need' : 'doNotNeed'}`}>
+            <span className="item-name">{name}</span>
+            <span className="item-store">{store}</span>
+            <div className="item-buttons">
+                <button
+                    className={`item-button ${need ? 'need' : ''}`}
+                    onClick={handleNeedClick}
+                >
+                    {need ? 'Need' : 'Do not need'}
+                </button>
+                <button
+                    className="item-button delete"
+                    onClick={handleDeleteClick}
+                >
+                    X
+                </button>
+            </div>
         </li>
     );
-};
+}
 export default Item;

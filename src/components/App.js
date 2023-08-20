@@ -97,7 +97,7 @@ function App() {
 
     return (
         <div className="App">
-            <header >
+            <header>
                 Shopping Lists
             </header>
             <NavBar />

@@ -6,6 +6,12 @@ function Items({ items, onAddItem, onDeleteItem, onUpdateNeed, stores, displayed
 
     return (
         <div>
+            <ItemForm
+                onAddItem={onAddItem}
+                stores={stores}
+                displayedStoreName={displayedStoreName}
+                setDisplayedStoreName={setDisplayedStoreName}
+            />
             {items.map((item) => (
                 <Item
                     key={item.id}
@@ -17,12 +23,6 @@ function Items({ items, onAddItem, onDeleteItem, onUpdateNeed, stores, displayed
                     onUpdateNeed={onUpdateNeed}
                 />
             ))}
-            <ItemForm
-                onAddItem={onAddItem}
-                stores={stores}
-                displayedStoreName={displayedStoreName}
-                setDisplayedStoreName={setDisplayedStoreName}
-            />
         </div>
     );
 }
