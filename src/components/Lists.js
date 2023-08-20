@@ -1,9 +1,19 @@
-import React from "react";
+import React, {useState} from "react";
 
 function Lists({ items, onAddItem, onDeleteItem, onUpdateNeed, stores }) {
+
     return (
         <div className='App'>
-            Lists
+            {stores.map((store) => (
+                <button
+                    key={store.id}
+                    id={store.id}
+                >
+                    {store.name}
+                </button>
+            ))}
+
+            
         </div>
     );
 }
