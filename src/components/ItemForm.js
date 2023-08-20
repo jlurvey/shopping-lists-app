@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-function ItemForm({ onAddItem, stores }) {
+function ItemForm({ onAddItem, stores, displayedStoreName, setDisplayedStoreName }) {
 
     //contolled form state
     const [form, setForm] = useState({
@@ -8,15 +8,20 @@ function ItemForm({ onAddItem, stores }) {
         store: '',
     });
 
+    console.log(form)
+
     //check if stores has rendered
     useEffect(() => {
         if (stores.length > 0) {
-            setForm({
-                name: '',
-                store: stores[0].name
-            });
+            displayedStoreName ? setForm({ name: '', store: displayedStoreName }) : setForm({ name: '', store: stores[0].name })
+            /* 
+                        setForm({
+                            name: '',
+                            store: stores[0].name
+                        });
+             */
         }
-    }, [stores])
+    }, [stores, displayedStoreName])
 
     //controlled form listener
     function handleChange(e) {
@@ -24,6 +29,9 @@ function ItemForm({ onAddItem, stores }) {
             ...form,
             [e.target.name]: e.target.value
         });
+        if (e.target.name === 'store') {
+            setDisplayedStoreName(e.target.value)
+        }
     };
 
     //submitForm event listener, POST new item to server with need=true, update items state
@@ -65,6 +73,7 @@ function ItemForm({ onAddItem, stores }) {
                     form='addItem'
                     type='select'
                     name='store'
+                    value={form.store}
                     onChange={handleChange}
                 >
                     {stores.map((store) => <option key={store.id} value={store.name}>{store.name}</option>)}

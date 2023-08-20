@@ -2,21 +2,36 @@ import React, { useState, useEffect } from "react";
 import Item from './Item';
 import ItemForm from './ItemForm';
 
-function Lists({ items, onAddItem, onDeleteItem, onUpdateNeed, stores }) {
+function Lists({
+    items,
+    onAddItem,
+    onDeleteItem,
+    onUpdateNeed,
+    stores,
+    displayedStoreName,
+    setDisplayedStoreName }) {
 
-    //figure out state
-    const [itemsToDisplay, setItemsToDisplay] = useState([])
+    const [itemsToDisplay, setItemsToDisplay] = useState([]);
+    //const [displayedStoreName, setDisplayedStoreName] = useState('');
 
     //check if Stores has rendered
     useEffect(() => {
         if (stores.length > 0) {
+            if (!displayedStoreName) {
+                setDisplayedStoreName(stores[0].name)
+                setItemsToDisplay(items.filter((item) => (
+                    item.store === stores[0].name)));
+            }
             setItemsToDisplay(items.filter((item) => (
-                item.store === stores[0].name)));
+                item.store === displayedStoreName)));
         }
     }, [stores, items])
 
+    /*     displayedStoreName ? setForm({ name: '', store: displayedStoreName }) : setForm({name:'',store:stores[0].name}) */
+
     function handleButtonClick(e) {
         setItemsToDisplay(items.filter((item) => item.store === e.target.name));
+        setDisplayedStoreName(e.target.name)
     };
 
     return (
@@ -31,7 +46,12 @@ function Lists({ items, onAddItem, onDeleteItem, onUpdateNeed, stores }) {
                     {store.name}
                 </button>
             ))}
-            <ItemForm onAddItem={onAddItem} stores={stores} />
+            <ItemForm
+                onAddItem={onAddItem}
+                stores={stores}
+                displayedStoreName={displayedStoreName}
+                setDisplayedStoreName={setDisplayedStoreName}
+            />
             {itemsToDisplay.map((item) => (
                 <Item
                     key={item.id}

@@ -12,6 +12,7 @@ function App() {
   //items, stores useState
   const [items, setItems] = useState([]);
   const [stores, setStores] = useState([])
+  const [displayedStoreName, setDisplayedStoreName] = useState('');
 
   //fetch items data
   useEffect(() => {
@@ -35,12 +36,6 @@ function App() {
   function handleAddItem(newItem) {
     setItems([...items, newItem])
   };
-  /* 
-    //deleteItem update items state
-    function handleDeleteItem(id) {
-      const updatedItems = items.filter((item) => item.id !== id);
-      setItems(updatedItems);
-    }; */
 
   //updateNeed update items state
   function handleUpdateNeed(updatedItem) {
@@ -98,6 +93,8 @@ function App() {
             onDeleteItem={handleDeleteItemsById}
             onUpdateNeed={handleUpdateNeed}
             stores={stores}
+            displayedStoreName={displayedStoreName}
+            setDisplayedStoreName={setDisplayedStoreName}
           />
         </Route>
         <Route exact path='/items'>
@@ -107,6 +104,8 @@ function App() {
             onDeleteItem={handleDeleteItemsById}
             onUpdateNeed={handleUpdateNeed}
             stores={stores}
+            displayedStoreName={displayedStoreName}
+            setDisplayedStoreName={setDisplayedStoreName}
           />
         </Route>
         <Route exact path='/stores'>
