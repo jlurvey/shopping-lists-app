@@ -73,7 +73,7 @@ function App() {
         setItems(updatedItems);
       });
   };
-  
+
   //deleteStore update stores state
   function handleDeleteStore(id, name) {
     const updatedStores = stores.filter((store) => store.id !== id);
@@ -92,7 +92,13 @@ function App() {
       <NavBar />
       <Switch>
         <Route exact path='/lists'>
-          <Lists />
+          <Lists
+            items={items}
+            onAddItem={handleAddItem}
+            onDeleteItem={handleDeleteItemsById}
+            onUpdateNeed={handleUpdateNeed}
+            stores={stores}
+          />
         </Route>
         <Route exact path='/items'>
           <Items
