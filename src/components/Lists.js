@@ -14,12 +14,19 @@ function Lists({ items, onAddItem, onDeleteItem, onUpdateNeed, stores }) {
         }
     }, [stores, items])
 
+    function handleButtonClick (e) {
+        console.log(e.target.name)
+        setItemsToDisplay(items.filter((item)=>item.store===e.target.name));
+    };
+
     return (
         <div className='App'>
             {stores.map((store) => (
                 <button
                     key={store.id}
                     id={store.id}
+                    name={store.name}
+                    onClick={handleButtonClick}
                 >
                     {store.name}
                 </button>
