@@ -35,6 +35,18 @@
       "need": true,
       "store": "Walgreens",
       "id": 11
+    },
+    {
+      "name": "3",
+      "need": true,
+      "store": "Publix",
+      "id": 12
+    },
+    {
+      "name": "3",
+      "need": true,
+      "store": "CVS",
+      "id": 13
     }
   ],
   "stores": [

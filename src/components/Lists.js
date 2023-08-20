@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Item from './Item';
+import ItemForm from './ItemForm';
 
 function Lists({ items, onAddItem, onDeleteItem, onUpdateNeed, stores }) {
 
@@ -14,9 +15,8 @@ function Lists({ items, onAddItem, onDeleteItem, onUpdateNeed, stores }) {
         }
     }, [stores, items])
 
-    function handleButtonClick (e) {
-        console.log(e.target.name)
-        setItemsToDisplay(items.filter((item)=>item.store===e.target.name));
+    function handleButtonClick(e) {
+        setItemsToDisplay(items.filter((item) => item.store === e.target.name));
     };
 
     return (
@@ -31,6 +31,7 @@ function Lists({ items, onAddItem, onDeleteItem, onUpdateNeed, stores }) {
                     {store.name}
                 </button>
             ))}
+            <ItemForm onAddItem={onAddItem} stores={stores} />
             {itemsToDisplay.map((item) => (
                 <Item
                     key={item.id}
