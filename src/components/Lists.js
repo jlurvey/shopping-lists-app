@@ -1,9 +1,10 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
+import Item from './Item';
 
 function Lists({ items, onAddItem, onDeleteItem, onUpdateNeed, stores }) {
 
-    const [itemsToDisplay,setItemsToDisplay] = useState(items.filter((item)=>item.store===stores[0].name));
-    console.log(itemsToDisplay);
+    const [itemsToDisplay, setItemsToDisplay] = useState(items.filter((item) => (
+        item.store === stores[0].name)));
 
     return (
         <div className='App'>
@@ -15,8 +16,18 @@ function Lists({ items, onAddItem, onDeleteItem, onUpdateNeed, stores }) {
                     {store.name}
                 </button>
             ))}
+            {itemsToDisplay.map((item) => (
+                <Item
+                    key={item.id}
+                    id={item.id}
+                    name={item.name}
+                    store={item.store}
+                    need={item.need}
+                    onDeleteItem={onDeleteItem}
+                    onUpdateNeed={onUpdateNeed}
+                />
+            ))}
 
-            
         </div>
     );
 }
