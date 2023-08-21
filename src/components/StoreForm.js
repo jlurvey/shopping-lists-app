@@ -39,7 +39,7 @@ function StoreForm({ onAddStore }) {
 
     return (
         <div>
-            <form id='addStore' onSubmit={handleSubmit}>
+            <form className='add' onSubmit={handleSubmit}>
                 Store Name:
                 <input
                     type='text'
@@ -47,7 +47,7 @@ function StoreForm({ onAddStore }) {
                     value={form.name}
                     onChange={handleChange}
                 />
-                <button type='submit'>Add Store</button>
+                <button className='add' type='submit'>Add Store</button>
             </form>
         </div>
     )

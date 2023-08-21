@@ -1,16 +1,112 @@
 {
   "items": [
     {
-      "name": "advil",
-      "need": false,
-      "store": "CVS",
+      "name": "Chicken Breasts",
+      "need": true,
+      "store": "Publix",
       "id": 1
     },
     {
-      "name": "cough drops",
-      "need": false,
-      "store": "CVS",
+      "name": "Broccoli",
+      "need": true,
+      "store": "Publix",
       "id": 2
+    },
+    {
+      "name": "Oats",
+      "need": true,
+      "store": "Publix",
+      "id": 3
+    },
+    {
+      "name": "Greek Yogurt",
+      "need": true,
+      "store": "Publix",
+      "id": 4
+    },
+    {
+      "name": "Frozen Berries",
+      "need": true,
+      "store": "Publix",
+      "id": 5
+    },
+    {
+      "name": "Milk",
+      "need": true,
+      "store": "Publix",
+      "id": 6
+    },
+    {
+      "name": "Eggs",
+      "need": true,
+      "store": "Publix",
+      "id": 7
+    },
+    {
+      "name": "Chips",
+      "need": false,
+      "store": "Publix",
+      "id": 8
+    },
+    {
+      "name": "Beer",
+      "need": false,
+      "store": "Publix",
+      "id": 9
+    },
+    {
+      "name": "Squash",
+      "need": true,
+      "store": "Whole Foods Market",
+      "id": 10
+    },
+    {
+      "name": "Carrots",
+      "need": false,
+      "store": "Whole Foods Market",
+      "id": 11
+    },
+    {
+      "name": "Tuna",
+      "need": true,
+      "store": "Whole Foods Market",
+      "id": 12
+    },
+    {
+      "name": "Rice",
+      "need": true,
+      "store": "Whole Foods Market",
+      "id": 13
+    },
+    {
+      "name": "Sesame Seeds",
+      "need": false,
+      "store": "Whole Foods Market",
+      "id": 14
+    },
+    {
+      "name": "Toothpaste",
+      "need": true,
+      "store": "CVS",
+      "id": 15
+    },
+    {
+      "name": "Advil",
+      "need": true,
+      "store": "CVS",
+      "id": 17
+    },
+    {
+      "name": "Melatonin",
+      "need": true,
+      "store": "CVS",
+      "id": 18
+    },
+    {
+      "name": "Multivitamin",
+      "need": true,
+      "store": "CVS",
+      "id": 19
     }
   ],
   "stores": [
@@ -21,6 +117,10 @@
     {
       "name": "CVS",
       "id": 2
+    },
+    {
+      "name": "Whole Foods Market",
+      "id": 3
     }
   ]
 }

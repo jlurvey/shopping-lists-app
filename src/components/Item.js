@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 function Item({ id, name, store, need, onUpdateNeed, onDeleteItem }) {
 
@@ -20,18 +20,18 @@ function Item({ id, name, store, need, onUpdateNeed, onDeleteItem }) {
     };
 
     return (
-        <li className={`item-container ${need ? 'need' : 'doNotNeed'}`}>
-            <span className="item-name">{name}</span>
-            <span className="item-store">{store}</span>
-            <div className="item-buttons">
+        <li className={need ? 'need' : 'doNotNeed'}>
+            <span >{name}</span>
+            <span >{store}</span>
+            <div >
                 <button
-                    className={`item-button ${need ? 'need' : ''}`}
+                    className={need ? 'need' : 'doNotNeed'}
                     onClick={handleNeedClick}
                 >
                     {need ? 'Need' : 'Do not need'}
                 </button>
                 <button
-                    className="item-button delete"
+                    className='delete'
                     onClick={handleDeleteClick}
                 >
                     X

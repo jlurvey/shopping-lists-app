@@ -12,7 +12,6 @@ function Lists({
     setDisplayedStoreName }) {
 
     const [itemsToDisplay, setItemsToDisplay] = useState([]);
-    //const [displayedStoreName, setDisplayedStoreName] = useState('');
 
     //check if Stores has rendered
     useEffect(() => {
@@ -25,9 +24,7 @@ function Lists({
             setItemsToDisplay(items.filter((item) => (
                 item.store === displayedStoreName)));
         }
-    }, [stores, items])
-
-    /*     displayedStoreName ? setForm({ name: '', store: displayedStoreName }) : setForm({name:'',store:stores[0].name}) */
+    }, [stores, items, displayedStoreName, setDisplayedStoreName])
 
     function handleButtonClick(e) {
         setItemsToDisplay(items.filter((item) => item.store === e.target.name));
@@ -35,9 +32,10 @@ function Lists({
     };
 
     return (
-        <div className='App'>
+        <div >
             {stores.map((store) => (
                 <button
+                    className='lists'
                     key={store.id}
                     id={store.id}
                     name={store.name}

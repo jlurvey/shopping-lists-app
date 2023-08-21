@@ -12,9 +12,9 @@ function Store({ id, name, onDeleteStore }) {
     };
 
     return (
-        <li>
+        <li >
             <span>{name}</span>
-            <button onClick={handleDeleteClick}>Delete</button>
+            <button className='delete' onClick={handleDeleteClick}>X</button>
         </li>
     )
 };

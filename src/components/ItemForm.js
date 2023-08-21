@@ -11,9 +11,13 @@ function ItemForm({ onAddItem, stores, displayedStoreName, setDisplayedStoreName
     //check if stores has rendered
     useEffect(() => {
         if (stores.length > 0) {
-            displayedStoreName ? setForm({ name: '', store: displayedStoreName }) : setForm({ name: '', store: stores[0].name })
+            displayedStoreName ? 
+            setForm({ name:form.name ,store: displayedStoreName })
+            : 
+            setForm({ name:form.name ,store: stores[0].name })
         }
-    }, [stores, displayedStoreName])
+    }, [form.name, stores, displayedStoreName])
+
 
     //controlled form listener
     function handleChange(e) {
@@ -52,7 +56,7 @@ function ItemForm({ onAddItem, stores, displayedStoreName, setDisplayedStoreName
 
     return (
         <div>
-            <form className='addItem' onSubmit={handleSubmit}>
+            <form className='add' onSubmit={handleSubmit}>
                 Item Name:
                 <input
                     type='text'
@@ -70,7 +74,7 @@ function ItemForm({ onAddItem, stores, displayedStoreName, setDisplayedStoreName
                 >
                     {stores.map((store) => <option key={store.id} value={store.name}>{store.name}</option>)}
                 </select>
-                <button type='submit'>Add Item</button>
+                <button className= 'add' type='submit'>Add Item</button>
             </form>
         </div>
     )
