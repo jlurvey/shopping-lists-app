@@ -4,6 +4,7 @@ import NavBar from './NavBar';
 import Lists from './Lists';
 import Items from './Items';
 import Stores from './Stores';
+import Home from './Home';
 import { Route, Switch } from 'react-router-dom'
 
 
@@ -102,7 +103,7 @@ function App() {
             </header>
             <NavBar />
             <Switch>
-                <Route exact path='/lists'>
+                <Route path='/lists'>
                     <Lists
                         items={items}
                         onAddItem={handleAddItem}
@@ -130,6 +131,9 @@ function App() {
                         onAddStore={handleAddStore}
                         onDeleteStore={handleDeleteStore}
                     />
+                </Route>
+                <Route exact path='/'>
+                    <Home/>
                 </Route>
             </Switch>
         </div>

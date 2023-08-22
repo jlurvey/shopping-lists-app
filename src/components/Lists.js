@@ -33,6 +33,7 @@ function Lists({
 
     return (
         <div >
+            <div className='listButtons'>
             {stores.map((store) => (
                 <button
                     className='lists'
@@ -43,7 +44,7 @@ function Lists({
                 >
                     {store.name}
                 </button>
-            ))}
+            ))}</div>
             <ItemForm
                 onAddItem={onAddItem}
                 stores={stores}

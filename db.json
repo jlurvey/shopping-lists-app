@@ -2,19 +2,19 @@
   "items": [
     {
       "name": "Chicken Breasts",
-      "need": true,
+      "need": false,
       "store": "Publix",
       "id": 1
     },
     {
       "name": "Broccoli",
-      "need": true,
+      "need": false,
       "store": "Publix",
       "id": 2
     },
     {
       "name": "Oats",
-      "need": true,
+      "need": false,
       "store": "Publix",
       "id": 3
     },
@@ -32,49 +32,43 @@
     },
     {
       "name": "Milk",
-      "need": true,
+      "need": false,
       "store": "Publix",
       "id": 6
     },
     {
-      "name": "Eggs",
-      "need": true,
-      "store": "Publix",
-      "id": 7
-    },
-    {
       "name": "Chips",
-      "need": false,
+      "need": true,
       "store": "Publix",
       "id": 8
     },
     {
       "name": "Beer",
-      "need": false,
+      "need": true,
       "store": "Publix",
       "id": 9
     },
     {
       "name": "Squash",
-      "need": true,
+      "need": false,
       "store": "Whole Foods Market",
       "id": 10
     },
     {
       "name": "Carrots",
-      "need": false,
+      "need": true,
       "store": "Whole Foods Market",
       "id": 11
     },
     {
       "name": "Tuna",
-      "need": true,
+      "need": false,
       "store": "Whole Foods Market",
       "id": 12
     },
     {
       "name": "Rice",
-      "need": true,
+      "need": false,
       "store": "Whole Foods Market",
       "id": 13
     },
@@ -86,7 +80,7 @@
     },
     {
       "name": "Toothpaste",
-      "need": true,
+      "need": false,
       "store": "CVS",
       "id": 15
     },
@@ -98,14 +92,14 @@
     },
     {
       "name": "Melatonin",
-      "need": true,
+      "need": false,
       "store": "CVS",
       "id": 18
     },
     {
-      "name": "Multivitamin",
+      "name": "",
       "need": true,
-      "store": "CVS",
+      "store": "",
       "id": 19
     }
   ],

@@ -95,6 +95,15 @@ li {
     border-radius: 5px;
 }
 
+.Home {
+    display: flex;
+    align-items: center;
+    background: var(--lightblue);
+    margin: .25rem;
+    border-radius: 5px;
+    justify-content: center;
+}
+
 li.doNotNeed {
     text-decoration: line-through;
     background: var(--gray);
@@ -137,7 +146,25 @@ button.delete {
     color: white;
 }
 
+
+
 button.lists {
     background: var(--orange);
     color: white;
+}
+
+.navbar a.active {
+    background: var(--lightblue);
+    border-radius: 5px;
+    color: var(--blue);
+    padding-right: .25rem;
+    padding-left: .25rem
+
+}
+
+.listButtons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
 }

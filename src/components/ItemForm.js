@@ -8,6 +8,8 @@ function ItemForm({ onAddItem, stores, displayedStoreName, setDisplayedStoreName
         store: '',
     });
 
+
+
     //check if stores has rendered
     useEffect(() => {
         if (stores.length > 0) {
@@ -72,6 +74,7 @@ function ItemForm({ onAddItem, stores, displayedStoreName, setDisplayedStoreName
                     value={form.store}
                     onChange={handleChange}
                 >
+                    
                     {stores.map((store) => <option key={store.id} value={store.name}>{store.name}</option>)}
                 </select>
                 <button className= 'add' type='submit'>Add Item</button>
