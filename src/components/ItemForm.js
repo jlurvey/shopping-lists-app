@@ -1,35 +1,47 @@
 import React, { useEffect, useState } from 'react';
 
 function ItemForm({ onAddItem, stores, displayedStoreName, setDisplayedStoreName }) {
+    /* 
+        //contolled form state
+        const [form, setForm] = useState({
+            name: '',
+            store: '',
+        });
+     */
+    const [formItem, setFormItem] = useState('');
+    const [formStore, setFormStore] = useState('')
 
-    //contolled form state
-    const [form, setForm] = useState({
-        name: '',
-        store: '',
-    });
-
-
-
-    //check if stores has rendered
     useEffect(() => {
         if (stores.length > 0) {
-            displayedStoreName ? 
-            setForm({ name:form.name ,store: displayedStoreName })
-            : 
-            setForm({ name:form.name ,store: stores[0].name })
+            setFormStore(stores[0].name)
         }
-    }, [form.name, stores, displayedStoreName])
+    }, [stores]);
 
+    useEffect(() => {
+        setFormStore(displayedStoreName)
+    }, [displayedStoreName]);
+
+
+    /* 
+        //check if stores has rendered
+        useEffect(() => {
+            if (stores.length > 0) {
+                displayedStoreName ? 
+                setForm({ name:form.name ,store: displayedStoreName })
+                : 
+                setForm({ name:form.name ,store: stores[0].name })
+            }
+        }, [form.name, stores, displayedStoreName])
+     */
 
     //controlled form listener
-    function handleChange(e) {
-        setForm({
-            ...form,
-            [e.target.name]: e.target.value
-        });
-        if (e.target.name === 'store') {
-            setDisplayedStoreName(e.target.value)
-        }
+    function handleNameChange(e) {
+        setFormItem(e.target.value);
+
+    };
+
+    function handleStoreChange(e) {
+        setFormStore(e.target.value);
     };
 
     //submitForm event listener, POST new item to server with need=true, update items state
@@ -37,10 +49,13 @@ function ItemForm({ onAddItem, stores, displayedStoreName, setDisplayedStoreName
         e.preventDefault();
 
         const formData = {
-            name: form.name,
+            name: formItem,
             need: true,
-            store: form.store,
+            store: formStore,
         };
+
+        setFormItem(e.target.value);
+        setFormStore(e.target.value);
 
         fetch('http://localhost:3000/items', {
             method: 'POST',
@@ -50,10 +65,8 @@ function ItemForm({ onAddItem, stores, displayedStoreName, setDisplayedStoreName
             .then((r) => r.json())
             .then((newItem) => onAddItem(newItem));
         //reset form
-        setForm({
-            name: '',
-            store: form.store
-        });
+        setFormItem('');
+        setFormStore(formStore);
     };
 
     return (
@@ -63,21 +76,21 @@ function ItemForm({ onAddItem, stores, displayedStoreName, setDisplayedStoreName
                 <input
                     type='text'
                     name='name'
-                    value={form.name}
-                    onChange={handleChange}
+                    value={formItem}
+                    onChange={handleNameChange}
                 />
                 Store:
                 <select
                     form='addItem'
                     type='select'
                     name='store'
-                    value={form.store}
-                    onChange={handleChange}
+                    value={formStore}
+                    onChange={handleStoreChange}
                 >
-                    
+
                     {stores.map((store) => <option key={store.id} value={store.name}>{store.name}</option>)}
                 </select>
-                <button className= 'add' type='submit'>Add Item</button>
+                <button className='add' type='submit'>Add Item</button>
             </form>
         </div>
     )
