@@ -55,14 +55,14 @@ function ItemForm({ onAddItem, stores, displayedStoreName, isItems }) {
     return (
         <div>
             <form className='add' onSubmit={handleSubmit}>
-                Item Name:
+                Item Name: 
                 <input
                     type='text'
                     name='name'
                     value={formItem}
                     onChange={handleNameChange}
                 />
-                Store:
+                Store: 
                 <select
                     form='addItem'
                     type='select'

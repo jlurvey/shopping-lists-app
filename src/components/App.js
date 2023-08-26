@@ -91,6 +91,7 @@ function App() {
         const updatedStores = stores.filter((store) => store.id !== id);
         const deletedItems = items.filter((item) => item.store === name)
         setStores(updatedStores);
+        setDisplayedStoreName(updatedStores[0])
         deletedItems.forEach((item) => {
             handleDeleteItemsById(item.id)
         });

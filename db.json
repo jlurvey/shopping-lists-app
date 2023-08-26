@@ -1,34 +1,10 @@
 {
   "items": [
     {
-      "name": "Advil",
-      "need": true,
-      "store": "CVS",
-      "id": 1
-    },
-    {
-      "name": "Tissues",
-      "need": true,
-      "store": "CVS",
-      "id": 2
-    },
-    {
-      "name": "Vitamins",
-      "need": true,
-      "store": "CVS",
-      "id": 3
-    },
-    {
       "name": "Fruits",
       "need": true,
       "store": "Publix",
       "id": 4
-    },
-    {
-      "name": "Eggs",
-      "need": true,
-      "store": "Publix",
-      "id": 5
     },
     {
       "name": "Milk",
@@ -37,36 +13,28 @@
       "id": 6
     },
     {
-      "name": "Vegetables",
+      "name": "Bananas",
       "need": true,
-      "store": "Whole Foods",
-      "id": 7
+      "store": "Publix",
+      "id": 10
     },
     {
-      "name": "Snacks",
+      "name": "Apples",
       "need": true,
-      "store": "Whole Foods",
-      "id": 8
+      "store": "Publix",
+      "id": 11
     },
     {
-      "name": "Bread",
+      "name": "Grapes",
       "need": true,
-      "store": "Whole Foods",
-      "id": 9
+      "store": "Publix",
+      "id": 12
     }
   ],
   "stores": [
     {
-      "name": "CVS",
-      "id": 1
-    },
-    {
       "name": "Publix",
       "id": 2
-    },
-    {
-      "name": "Whole Foods",
-      "id": 3
     }
   ]
 }
