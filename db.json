@@ -50,7 +50,7 @@
     },
     {
       "name": "Squash",
-      "need": false,
+      "need": true,
       "store": "Whole Foods Market",
       "id": 10
     },
@@ -62,19 +62,19 @@
     },
     {
       "name": "Tuna",
-      "need": false,
+      "need": true,
       "store": "Whole Foods Market",
       "id": 12
     },
     {
       "name": "Rice",
-      "need": false,
+      "need": true,
       "store": "Whole Foods Market",
       "id": 13
     },
     {
       "name": "Sesame Seeds",
-      "need": false,
+      "need": true,
       "store": "Whole Foods Market",
       "id": 14
     },
@@ -95,12 +95,6 @@
       "need": false,
       "store": "CVS",
       "id": 18
-    },
-    {
-      "name": "",
-      "need": true,
-      "store": "",
-      "id": 19
     }
   ],
   "stores": [
