@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 
-function ItemForm({ onAddItem, stores, displayedStoreName, setDisplayedStoreName, isItems }) {
+function ItemForm({ onAddItem, stores, displayedStoreName, isItems }) {
 
     const [formItem, setFormItem] = useState('');
     const [formStore, setFormStore] = useState('')
 
+    //useEffect to check if stores has loaded and setFormStore based on Items or Lists
     useEffect(() => {
         if (isItems) {
             if (stores.length > 0) {
@@ -16,9 +17,7 @@ function ItemForm({ onAddItem, stores, displayedStoreName, setDisplayedStoreName
 
     }, [displayedStoreName, isItems, stores]);
 
-    console.log(displayedStoreName)
-
-    //controlled form listener
+    //controlled form listeners
     function handleNameChange(e) {
         setFormItem(e.target.value);
 

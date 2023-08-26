@@ -2,14 +2,7 @@ import React, { useState, useEffect } from "react";
 import Item from './Item';
 import ItemForm from './ItemForm';
 
-function Lists({
-    items,
-    onAddItem,
-    onDeleteItem,
-    onUpdateNeed,
-    stores,
-    displayedStoreName,
-    setDisplayedStoreName }) {
+function Lists({ items, onAddItem, onDeleteItem, onUpdateNeed, stores, displayedStoreName, setDisplayedStoreName }) {
 
     const [itemsToDisplay, setItemsToDisplay] = useState([]);
 
@@ -26,6 +19,7 @@ function Lists({
         }
     }, [stores, items, displayedStoreName, setDisplayedStoreName])
 
+    //Change displayed store
     function handleButtonClick(e) {
         setItemsToDisplay(items.filter((item) => item.store === e.target.name));
         setDisplayedStoreName(e.target.name)
@@ -34,17 +28,17 @@ function Lists({
     return (
         <div >
             <div className='listButtons'>
-            {stores.map((store) => (
-                <button
-                    className='lists'
-                    key={store.id}
-                    id={store.id}
-                    name={store.name}
-                    onClick={handleButtonClick}
-                >
-                    {store.name}
-                </button>
-            ))}</div>
+                {stores.map((store) => (
+                    <button
+                        className='lists'
+                        key={store.id}
+                        id={store.id}
+                        name={store.name}
+                        onClick={handleButtonClick}
+                    >
+                        {store.name}
+                    </button>
+                ))}</div>
             <ItemForm
                 onAddItem={onAddItem}
                 stores={stores}
