@@ -50,6 +50,7 @@ function Lists({
                 stores={stores}
                 displayedStoreName={displayedStoreName}
                 setDisplayedStoreName={setDisplayedStoreName}
+                isItems={false}
             />
             {itemsToDisplay.map((item) => (
                 <Item

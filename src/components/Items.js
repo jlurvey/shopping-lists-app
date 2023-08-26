@@ -11,6 +11,7 @@ function Items({ items, onAddItem, onDeleteItem, onUpdateNeed, stores, displayed
                 stores={stores}
                 displayedStoreName={displayedStoreName}
                 setDisplayedStoreName={setDisplayedStoreName}
+                isItems={true}
             />
             {items.map((item) => (
                 <Item

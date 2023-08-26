@@ -1,38 +1,22 @@
 import React, { useEffect, useState } from 'react';
 
-function ItemForm({ onAddItem, stores, displayedStoreName, setDisplayedStoreName }) {
-    /* 
-        //contolled form state
-        const [form, setForm] = useState({
-            name: '',
-            store: '',
-        });
-     */
+function ItemForm({ onAddItem, stores, displayedStoreName, setDisplayedStoreName, isItems }) {
+
     const [formItem, setFormItem] = useState('');
     const [formStore, setFormStore] = useState('')
 
     useEffect(() => {
-        if (stores.length > 0) {
-            setFormStore(stores[0].name)
-        }
-    }, [stores]);
-
-    useEffect(() => {
-        setFormStore(displayedStoreName)
-    }, [displayedStoreName]);
-
-
-    /* 
-        //check if stores has rendered
-        useEffect(() => {
+        if (isItems) {
             if (stores.length > 0) {
-                displayedStoreName ? 
-                setForm({ name:form.name ,store: displayedStoreName })
-                : 
-                setForm({ name:form.name ,store: stores[0].name })
+                setFormStore(stores[0].name)
             }
-        }, [form.name, stores, displayedStoreName])
-     */
+        } else {
+            setFormStore(displayedStoreName)
+        };
+
+    }, [displayedStoreName, isItems, stores]);
+
+    console.log(displayedStoreName)
 
     //controlled form listener
     function handleNameChange(e) {
