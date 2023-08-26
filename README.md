@@ -11,7 +11,7 @@ Lists: Users can create shopping lists based on different stores and view items 
 
 Navigation: The app includes a navigation bar with links to different sections: Lists, Items, and Stores.
 
-Components
+Components:
 The app consists of the following main components:
 
 App: The root component that manages the overall structure of the app and handles routing.
