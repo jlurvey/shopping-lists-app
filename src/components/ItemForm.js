@@ -27,6 +27,8 @@ function ItemForm({ onAddItem, stores, displayedStoreName, isItems }) {
         setFormStore(e.target.value);
     };
 
+    console.log(formItem, formStore)
+
     //submitForm event listener, POST new item to server with need=true, update items state
     function handleSubmit(e) {
         e.preventDefault();
@@ -36,9 +38,6 @@ function ItemForm({ onAddItem, stores, displayedStoreName, isItems }) {
             need: true,
             store: formStore,
         };
-
-        setFormItem(e.target.value);
-        setFormStore(e.target.value);
 
         fetch('http://localhost:3000/items', {
             method: 'POST',

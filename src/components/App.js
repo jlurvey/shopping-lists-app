@@ -14,6 +14,7 @@ function App() {
     const [items, setItems] = useState([]);
     const [stores, setStores] = useState([])
     const [displayedStoreName, setDisplayedStoreName] = useState('');
+    
 
     //fetch items data
     useEffect(() => {

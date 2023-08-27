@@ -1,40 +1,13 @@
 {
-  "items": [
-    {
-      "name": "Fruits",
-      "need": true,
-      "store": "Publix",
-      "id": 4
-    },
-    {
-      "name": "Milk",
-      "need": true,
-      "store": "Publix",
-      "id": 6
-    },
-    {
-      "name": "Bananas",
-      "need": true,
-      "store": "Publix",
-      "id": 10
-    },
-    {
-      "name": "Apples",
-      "need": true,
-      "store": "Publix",
-      "id": 11
-    },
-    {
-      "name": "Grapes",
-      "need": true,
-      "store": "Publix",
-      "id": 12
-    }
-  ],
+  "items": [],
   "stores": [
     {
-      "name": "Publix",
-      "id": 2
+      "name": "Whole foods",
+      "id": 5
+    },
+    {
+      "name": "CVS",
+      "id": 6
     }
   ]
 }
