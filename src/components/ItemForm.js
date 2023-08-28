@@ -27,8 +27,6 @@ function ItemForm({ onAddItem, stores, displayedStoreName, isItems }) {
         setFormStore(e.target.value);
     };
 
-    console.log(formItem, formStore)
-
     //submitForm event listener, POST new item to server with need=true, update items state
     function handleSubmit(e) {
         e.preventDefault();

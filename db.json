@@ -1,5 +1,42 @@
 {
-  "items": [],
+  "items": [
+    {
+      "name": "Apples",
+      "need": true,
+      "store": "Publix",
+      "id": 1
+    },
+    {
+      "name": "Bananas",
+      "need": true,
+      "store": "Publix",
+      "id": 2
+    },
+    {
+      "name": "Grapes",
+      "need": true,
+      "store": "Publix",
+      "id": 4
+    },
+    {
+      "name": "Crackers",
+      "need": true,
+      "store": "Publix",
+      "id": 5
+    },
+    {
+      "name": "Vitamins",
+      "need": true,
+      "store": "CVS",
+      "id": 6
+    },
+    {
+      "name": "Advil",
+      "need": true,
+      "store": "CVS",
+      "id": 7
+    }
+  ],
   "stores": [
     {
       "name": "Whole foods",
@@ -8,6 +45,10 @@
     {
       "name": "CVS",
       "id": 6
+    },
+    {
+      "name": "Publix",
+      "id": 7
     }
   ]
 }
