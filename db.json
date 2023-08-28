@@ -20,7 +20,7 @@
     },
     {
       "name": "Crackers",
-      "need": true,
+      "need": false,
       "store": "Publix",
       "id": 5
     },
@@ -32,16 +32,30 @@
     },
     {
       "name": "Advil",
-      "need": true,
+      "need": false,
       "store": "CVS",
       "id": 7
+    },
+    {
+      "name": "Kleenex",
+      "need": true,
+      "store": "CVS",
+      "id": 8
+    },
+    {
+      "name": "Soap",
+      "need": true,
+      "store": "CVS",
+      "id": 9
+    },
+    {
+      "name": "Toothpaste",
+      "need": true,
+      "store": "CVS",
+      "id": 10
     }
   ],
   "stores": [
-    {
-      "name": "Whole foods",
-      "id": 5
-    },
     {
       "name": "CVS",
       "id": 6

@@ -87,12 +87,13 @@ function App() {
             });
     };
 
+
     //deleteStore update stores state
     function handleDeleteStore(id, name) {
         const updatedStores = stores.filter((store) => store.id !== id);
         const deletedItems = items.filter((item) => item.store === name)
         setStores(updatedStores);
-        setDisplayedStoreName(updatedStores[0])
+        setDisplayedStoreName(updatedStores[0].name)
         deletedItems.forEach((item) => {
             handleDeleteItemsById(item.id)
         });
